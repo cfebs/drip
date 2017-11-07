@@ -1,0 +1,19 @@
+body, html
+{
+	overflow: hidden;
+	margin: 0px;
+}
+
+.message {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 10vh;
+    line-height: 0.95;
+    min-width: 70%;
+    transform: translate(-50%, -50%)
+}
