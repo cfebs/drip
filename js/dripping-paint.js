@@ -17,6 +17,9 @@ var paint = [];
 
 var totalPaints = width/50;
 var size = 20;
+if (width < 500) {
+    size = 5;
+}
 
 function init(){
     for (var i = 0; i < totalPaints; i++){
