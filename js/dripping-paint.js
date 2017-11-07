@@ -51,7 +51,9 @@ function update(){
             paint.splice(i,1);
             //addPaint();
         }
-        drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);
+        if (paint[i]) {
+            drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);
+        }
     }
     window.requestAnimationFrame(update);
 }
