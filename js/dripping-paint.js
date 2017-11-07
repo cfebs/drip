@@ -24,6 +24,11 @@ function init(){
     }
 
 	//Set Interval -- Terrible! I know!
+    setInterval(function() {
+        for (var i = 0; i < totalPaints; i++){
+            addPaint();
+        }
+    }, 1000);
     window.requestAnimationFrame(update);
     //setInterval( update, 40 );
 }
@@ -41,7 +46,7 @@ function update(){
         paint[i].y = paint[i].y + paint[i].v;
         if (paint[i].y > height + 60){
             paint.splice(i,1);
-            addPaint();
+            //addPaint();
         }
         drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);
     }
@@ -62,7 +67,7 @@ function addPaint(){
 	var maxTries = 25;
 	var conflict;
 	for (i; i < maxTries; i++) {
-		size = Math.random() * size + 20;
+		size = Math.random() * size + 10;
 		x = Math.random() * width;
 
 		conflict = false;
